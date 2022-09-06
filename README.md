@@ -1,4 +1,3 @@
-⚠️ WIP ⚠️
 # Analiza gazów rozpuszczonych DGA - Metoda Duvala 🇵🇱
 ## Wstęp
 Głównym celem mojej pracy magisterskiej było stworzenie programu służącego do analizy koncentracji gazów w oleju metodą Duvala. Wykorzystanie tego programu pozwoli na szybkie stwierdzenie stanu transformatora bazując na jego oleju. Program ten jest w stanie przeanalizować jednocześnie dużo transformatorów naraz, albo jeden transformator w wielu okresach czasu. Należy oczywiście pamiętać o tym, że metoda Duvala sprawdza się najlepiej gdy poza granicę bezpieczeństwa wychodzą tylko gazy z głównej piątki: wodór, metan, acetylen, etylen oraz etan.
@@ -39,4 +38,41 @@ W celu automatyzacji analizy stworzono program Duval. Jest to program oknowy nap
 Przeprowadzenie testów porównawczych z rzeczywistymi raportami z badań chromatograficznych potwierdza, że program działa prawidłowo. Głębsza analiza tematu, pełna analiza kodu programu oraz przeprowadzone testy są dostępne w mojej ![pracy magisterskiej](https://github.com/Kacper-Hoffman/Duval-Triangle/blob/main/RE000000-95009-MGR.pdf).
 
 ---
-# Dissolved Gas Analisys - Duval Method 🇬🇧
+# Dissolved Gas Analysis - Duval Method 🇬🇧
+## Introduction
+The main goal of my master's thesis was the creation of a program for DGA analysis of transformer oil gas. Using this program you can quickly determine the state of the transformer. The program is capable of analising many transformers simultaneously, or one transformer in many steps of time. Of course, you have to remember that Duval method works best when the safe limits are only exceeded by the main five gases: hydrogen, methane, acetylene, ethylene and ethane.
+## DGA
+Dissolved Gas Analysis allows determining the state of transformer based on the concentrations of gas in its oil. This method starts with electrochemical processes. Transformer oil is composed of many hydrocarbons. The changing electric field causes rise in temperature. Temperature then causes base elements of oil to dissolve. This proces is not linear. Different gases dissolve at different temperatures. First, hydrogen is dissolved. Then, as temperature increases, the other gases start dissolving in order: ethane, methane, etylene and finally acethylene. The order is based on the strength of bonds. For example, acethylene has a triple bond bethween carbon and hydrogen, meaning that it can only dissolve at high temperatures.
+
+![Electrochemical Processes](https://github.com/Kacper-Hoffman/Duval-Triangle/blob/main/1_1.png)
+
+![Order of Dissolution](https://github.com/Kacper-Hoffman/Duval-Triangle/blob/main/3_1.png)
+
+Concentrations are obtained through chromatography of the oil. Then the concentrations are analised. There are multiple methods, but here we use the Duval method. Duval method is based on Duval triangles - ternary plots where relative concentration points are. Relative concentrations are calculated as precentage ratios of one gas to the sum of all others.
+
+![Relative Concentrations](https://github.com/Kacper-Hoffman/Duval-Triangle/blob/main/i2.png)
+
+Those concentrations are displayed inside the triangles. Michel Duval created multiple triangles based on the type of oil and type of device analised. For transformers with mineral oil we use triangles number 1, 4 i 5. Triangle 1 contains relative concentrations of methane, etylene and acethylene. Triangle 4 oses the concentrations of hydrogen, ethane and methane. Triangle 5 is based on ethane, methane and etylene.
+
+![Triangle 1](https://github.com/Kacper-Hoffman/Duval-Triangle/blob/main/t1.png)
+
+Triangle 1 is the first test. The triangle is divided into 7 regions. The result of analysis is based on which region contains the relative concentrations point. Regions D1 and D2 reflect low and high energy discharges. DT is the region where both discharges and overheating is possible. Regions T1, T2 i T3 represent overheating of low (T < 300 °C), medium (300 °C < T < 700 °C) and high (T > 700 °C) temperatures. Region PD represents partial discharges. If the relative concentration point is in regions D1, D2, DT this means tht they are the final result of the analysis. If the test shows partial discharges or low temperature overheating, we use triangle 4. If medium of high temperature overheating is detected, we then use trangle 5.
+
+![Triangle 4](https://github.com/Kacper-Hoffman/Duval-Triangle/blob/main/t2.png)
+
+Triangle 4 uses hydrogen, ethane and methane. Because these gases easly dissolve within oil, this triangle determines the cause of transformer damage in low temperatures. It contains 5 regions. Region PD of partial discharges is present here. Region S represents stray gassing due to leaking. Region C is carbonization of cellulose isolation. Region O represents low temperature overheating without carbonization. The final region, without label, means that the result of triangle 1 was correct.
+
+![Triangle 5](https://github.com/Kacper-Hoffman/Duval-Triangle/blob/main/t3.png)
+
+Triangle 5 contains ethane, methane and etylene. The goal of this triangle is determining the cause of damage in higher temperatures. It contains 9 regions. Here we can detect partial discharges PD, overheating of medium and high temperature T2, T3. The cause can also be stray gassing S, carbonization C and low temperature overheating O. The final region, as mentioned before, means that the result of analysis with triangle 1 was correct.
+
+## Duval Program
+To automate analysis the Duval program was created. It's a window application written by me in C#. It contains three pages. In the first page you choose the number of transformers and input their data. After pressing the "Oblicz" button in the second pages you can view the results of analysis. Concentration points are visible on the triangles as well as written with text below. The third page contains basic information about Dissolved Gas Analysis.
+
+![Duval 1](https://github.com/Kacper-Hoffman/Duval-Triangle/blob/main/5_1.png)
+
+![Duval 2](https://github.com/Kacper-Hoffman/Duval-Triangle/blob/main/5_2.png)
+
+![Duval 3](https://github.com/Kacper-Hoffman/Duval-Triangle/blob/main/4_3.png)
+
+Preforming comparative tests with actual chromatographic results confirms that the program works correct. Deeper analysis of the topic, full analysis of code and the tests are available in my ![master's thesis (🇵🇱 only)](https://github.com/Kacper-Hoffman/Duval-Triangle/blob/main/RE000000-95009-MGR.pdf).
