@@ -35,7 +35,7 @@ W celu automatyzacji analizy stworzono program Duval. Jest to program oknowy nap
 
 ![Duval 3](https://github.com/Kacper-Hoffman/Duval-Triangle/blob/main/4_3.png)
 
-Przeprowadzenie testów porównawczych z rzeczywistymi raportami z badań chromatograficznych potwierdza, że program działa prawidłowo. Głębsza analiza tematu, pełna analiza kodu programu oraz przeprowadzone testy są dostępne w mojej ![pracy magisterskiej](https://github.com/Kacper-Hoffman/Duval-Triangle/blob/main/RE000000-95009-MGR.pdf).
+Przeprowadzenie testów porównawczych z rzeczywistymi raportami z badań chromatograficznych potwierdza, że program działa prawidłowo. Głębsza analiza tematu, pełna analiza kodu programu oraz przeprowadzone testy są dostępne w mojej [pracy magisterskiej](https://github.com/Kacper-Hoffman/Duval-Triangle/blob/main/RE000000-95009-MGR.pdf).
 
 ---
 # Dissolved Gas Analysis - Duval Method 🇬🇧
@@ -75,4 +75,4 @@ To automate analysis the Duval program was created. It's a window application wr
 
 ![Duval 3](https://github.com/Kacper-Hoffman/Duval-Triangle/blob/main/4_3.png)
 
-Preforming comparative tests with actual chromatographic results confirms that the program works correct. Deeper analysis of the topic, full analysis of code and the tests are available in my ![master's thesis (🇵🇱 only)](https://github.com/Kacper-Hoffman/Duval-Triangle/blob/main/RE000000-95009-MGR.pdf).
+Preforming comparative tests with actual chromatographic results confirms that the program works correct. Deeper analysis of the topic, full analysis of code and the tests are available in my [master's thesis (🇵🇱 only)](https://github.com/Kacper-Hoffman/Duval-Triangle/blob/main/RE000000-95009-MGR.pdf).
